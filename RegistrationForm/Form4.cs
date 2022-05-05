@@ -44,7 +44,7 @@ namespace RegistrationForm
         }
 
         private void btnCreateFile_Click(object sender, EventArgs e)
-        {//Code for CreateFile
+        { //Code for CreateFile
             try
             {
                 string path = @"D:\TestFolder1\FirstFile.txt";
