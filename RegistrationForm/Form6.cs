@@ -11,41 +11,42 @@ using System.IO;
 
 namespace RegistrationForm
 {
-    public partial class Form5 : Form
+    public partial class Form6 : Form
     {
         FileStream fs;
-        public Form5()
+        public Form6()
         {
             InitializeComponent();
         }
 
         private void btnWrite_Click(object sender, EventArgs e)
         {
-            try
+            try 
             {
-                int Roll = Convert.ToInt32(textBoxRoll.Text);
-                string Name = textBoxName.Text;
-                double Per = Convert.ToDouble(textBoxPercentage.Text);
-                string Stream = textBoxStream.Text;
-                string City = textBoxCity.Text;
+                int Eid = Convert.ToInt32(textBoxId.Text);
+                string Ename = textBoxName.Text;
+                string Designation = textBoxDesignation.Text;
+                double salary = Convert.ToDouble(textBoxSalary.Text);
+                string Department = textBoxDepartment.Text;
 
                 fs = new FileStream(@"D:\TestFolder1\FirstFile.txt", FileMode.Create, FileAccess.Write);
                 BinaryWriter bw = new BinaryWriter(fs);
-                bw.Write(Roll);
-                bw.Write(Name);
-                bw.Write(Per);
-                bw.Write(Stream);
-                bw.Write(City);
+                bw.Write(Eid);
+                bw.Write(Ename);
+                bw.Write(Designation);
+                bw.Write(salary);
+                bw.Write(Department);
                 bw.Close();
                 MessageBox.Show("Done");
-            }
-            catch(Exception ex)
+
+             }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally
             {
-                fs.Close();
+               fs.Close();
             }
         }
 
@@ -55,11 +56,11 @@ namespace RegistrationForm
             {
                 fs = new FileStream(@"D:\TestFolder1\FirstFile.txt", FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
-                textBoxRoll.Text = br.ReadInt32().ToString();
+                textBoxId.Text = br.ReadInt32().ToString();
                 textBoxName.Text = br.ReadString();
-                textBoxPercentage.Text = br.ReadDouble().ToString();
-                textBoxStream.Text = br.ReadString();
-                textBoxCity.Text = br.ReadString();
+                textBoxDesignation.Text = br.ReadString();
+                textBoxSalary.Text = br.ReadDouble().ToString();
+               textBoxDepartment.Text = br.ReadString();
                 br.Close();
 
             }
