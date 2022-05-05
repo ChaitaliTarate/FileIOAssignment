@@ -105,7 +105,7 @@ namespace RegistrationForm
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(75, 23);
             this.btnRead.TabIndex = 7;
-            this.btnRead.Text = "Read From File";
+            this.btnRead.Text = "Read File";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
