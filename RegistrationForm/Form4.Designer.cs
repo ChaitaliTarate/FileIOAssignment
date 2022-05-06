@@ -39,6 +39,14 @@ namespace RegistrationForm
             this.btnRead = new System.Windows.Forms.Button();
             this.btnCreateFile = new System.Windows.Forms.Button();
             this.btnCreateFolder = new System.Windows.Forms.Button();
+            this.btnBinaryWrite = new System.Windows.Forms.Button();
+            this.btnBinaryRead = new System.Windows.Forms.Button();
+            this.btnXmlWrite = new System.Windows.Forms.Button();
+            this.btnXmlRead = new System.Windows.Forms.Button();
+            this.btnSoapWrite = new System.Windows.Forms.Button();
+            this.btnSoapRead = new System.Windows.Forms.Button();
+            this.btnJsonWrite = new System.Windows.Forms.Button();
+            this.btnJsonRead = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelId
@@ -93,7 +101,7 @@ namespace RegistrationForm
             // 
             this.btnWrite.Location = new System.Drawing.Point(80, 231);
             this.btnWrite.Name = "btnWrite";
-            this.btnWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnWrite.Size = new System.Drawing.Size(95, 23);
             this.btnWrite.TabIndex = 6;
             this.btnWrite.Text = "Write to file";
             this.btnWrite.UseVisualStyleBackColor = true;
@@ -101,9 +109,9 @@ namespace RegistrationForm
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(360, 231);
+            this.btnRead.Location = new System.Drawing.Point(215, 231);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(75, 23);
+            this.btnRead.Size = new System.Drawing.Size(91, 23);
             this.btnRead.TabIndex = 7;
             this.btnRead.Text = "Read File";
             this.btnRead.UseVisualStyleBackColor = true;
@@ -111,9 +119,9 @@ namespace RegistrationForm
             // 
             // btnCreateFile
             // 
-            this.btnCreateFile.Location = new System.Drawing.Point(360, 277);
+            this.btnCreateFile.Location = new System.Drawing.Point(452, 231);
             this.btnCreateFile.Name = "btnCreateFile";
-            this.btnCreateFile.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateFile.Size = new System.Drawing.Size(91, 23);
             this.btnCreateFile.TabIndex = 9;
             this.btnCreateFile.Text = "Create File";
             this.btnCreateFile.UseVisualStyleBackColor = true;
@@ -121,19 +129,107 @@ namespace RegistrationForm
             // 
             // btnCreateFolder
             // 
-            this.btnCreateFolder.Location = new System.Drawing.Point(80, 277);
+            this.btnCreateFolder.Location = new System.Drawing.Point(332, 231);
             this.btnCreateFolder.Name = "btnCreateFolder";
-            this.btnCreateFolder.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateFolder.Size = new System.Drawing.Size(95, 23);
             this.btnCreateFolder.TabIndex = 10;
             this.btnCreateFolder.Text = "CreateFolder";
             this.btnCreateFolder.UseVisualStyleBackColor = true;
             this.btnCreateFolder.Click += new System.EventHandler(this.btnCreateFolder_Click);
+            // 
+            // btnBinaryWrite
+            // 
+            this.btnBinaryWrite.Location = new System.Drawing.Point(3, 278);
+            this.btnBinaryWrite.Name = "btnBinaryWrite";
+            this.btnBinaryWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnBinaryWrite.TabIndex = 11;
+            this.btnBinaryWrite.Text = "Binary Write";
+            this.btnBinaryWrite.UseVisualStyleBackColor = true;
+            this.btnBinaryWrite.Click += new System.EventHandler(this.btnBinaryWrite_Click);
+            // 
+            // btnBinaryRead
+            // 
+            this.btnBinaryRead.Location = new System.Drawing.Point(84, 278);
+            this.btnBinaryRead.Name = "btnBinaryRead";
+            this.btnBinaryRead.Size = new System.Drawing.Size(75, 23);
+            this.btnBinaryRead.TabIndex = 12;
+            this.btnBinaryRead.Text = "Binary Read";
+            this.btnBinaryRead.UseVisualStyleBackColor = true;
+            this.btnBinaryRead.Click += new System.EventHandler(this.btnBinaryRead_Click);
+            // 
+            // btnXmlWrite
+            // 
+            this.btnXmlWrite.Location = new System.Drawing.Point(165, 278);
+            this.btnXmlWrite.Name = "btnXmlWrite";
+            this.btnXmlWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnXmlWrite.TabIndex = 13;
+            this.btnXmlWrite.Text = "Xml Write";
+            this.btnXmlWrite.UseVisualStyleBackColor = true;
+            this.btnXmlWrite.Click += new System.EventHandler(this.btnXmlWrite_Click);
+            // 
+            // btnXmlRead
+            // 
+            this.btnXmlRead.Location = new System.Drawing.Point(246, 278);
+            this.btnXmlRead.Name = "btnXmlRead";
+            this.btnXmlRead.Size = new System.Drawing.Size(75, 23);
+            this.btnXmlRead.TabIndex = 14;
+            this.btnXmlRead.Text = "Xml Read";
+            this.btnXmlRead.UseVisualStyleBackColor = true;
+            this.btnXmlRead.Click += new System.EventHandler(this.btnXmlRead_Click);
+            // 
+            // btnSoapWrite
+            // 
+            this.btnSoapWrite.Location = new System.Drawing.Point(327, 278);
+            this.btnSoapWrite.Name = "btnSoapWrite";
+            this.btnSoapWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnSoapWrite.TabIndex = 16;
+            this.btnSoapWrite.Text = "Soap Write";
+            this.btnSoapWrite.UseVisualStyleBackColor = true;
+            this.btnSoapWrite.Click += new System.EventHandler(this.btnSoapWrite_Click);
+            // 
+            // btnSoapRead
+            // 
+            this.btnSoapRead.Location = new System.Drawing.Point(408, 278);
+            this.btnSoapRead.Name = "btnSoapRead";
+            this.btnSoapRead.Size = new System.Drawing.Size(75, 23);
+            this.btnSoapRead.TabIndex = 17;
+            this.btnSoapRead.Text = "Soap Read";
+            this.btnSoapRead.UseVisualStyleBackColor = true;
+            this.btnSoapRead.Click += new System.EventHandler(this.btnSoapRead_Click);
+            // 
+            // btnJsonWrite
+            // 
+            this.btnJsonWrite.Location = new System.Drawing.Point(489, 278);
+            this.btnJsonWrite.Name = "btnJsonWrite";
+            this.btnJsonWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnJsonWrite.TabIndex = 18;
+            this.btnJsonWrite.Text = "Json Write";
+            this.btnJsonWrite.UseVisualStyleBackColor = true;
+            this.btnJsonWrite.Click += new System.EventHandler(this.btnJsonWrite_Click);
+            // 
+            // btnJsonRead
+            // 
+            this.btnJsonRead.Location = new System.Drawing.Point(570, 278);
+            this.btnJsonRead.Name = "btnJsonRead";
+            this.btnJsonRead.Size = new System.Drawing.Size(75, 23);
+            this.btnJsonRead.TabIndex = 19;
+            this.btnJsonRead.Text = "Json Read";
+            this.btnJsonRead.UseVisualStyleBackColor = true;
+            this.btnJsonRead.Click += new System.EventHandler(this.btnJsonRead_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 365);
+            this.Controls.Add(this.btnJsonRead);
+            this.Controls.Add(this.btnJsonWrite);
+            this.Controls.Add(this.btnSoapRead);
+            this.Controls.Add(this.btnSoapWrite);
+            this.Controls.Add(this.btnXmlRead);
+            this.Controls.Add(this.btnXmlWrite);
+            this.Controls.Add(this.btnBinaryRead);
+            this.Controls.Add(this.btnBinaryWrite);
             this.Controls.Add(this.btnCreateFolder);
             this.Controls.Add(this.btnCreateFile);
             this.Controls.Add(this.btnRead);
@@ -163,5 +259,13 @@ namespace RegistrationForm
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnCreateFile;
         private System.Windows.Forms.Button btnCreateFolder;
+        private System.Windows.Forms.Button btnBinaryWrite;
+        private System.Windows.Forms.Button btnBinaryRead;
+        private System.Windows.Forms.Button btnXmlWrite;
+        private System.Windows.Forms.Button btnXmlRead;
+        private System.Windows.Forms.Button btnSoapWrite;
+        private System.Windows.Forms.Button btnSoapRead;
+        private System.Windows.Forms.Button btnJsonWrite;
+        private System.Windows.Forms.Button btnJsonRead;
     }
 }
