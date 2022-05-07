@@ -15,7 +15,6 @@ using System.Text.Json;
 
 namespace RegistrationForm
 {
-   
     public partial class Form8 : Form
     {
         FileStream fs;
@@ -24,7 +23,7 @@ namespace RegistrationForm
             InitializeComponent();
         }
 
-        private void btnWrite_Click(object sender, EventArgs e)
+        private void btnWriteFile_Click(object sender, EventArgs e)
         {
             try
             {
@@ -43,7 +42,7 @@ namespace RegistrationForm
                 MessageBox.Show("Done");
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -51,9 +50,9 @@ namespace RegistrationForm
             {
                 fs.Close();
             }
-            }
+        }
 
-        private void btnRead_Click(object sender, EventArgs e)
+        private void btnReadFile_Click(object sender, EventArgs e)
         {
             try
             {
@@ -65,7 +64,7 @@ namespace RegistrationForm
                 textBoxPrice.Text = br.ReadInt32().ToString();
                 br.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -75,7 +74,7 @@ namespace RegistrationForm
             }
         }
 
-        private void btnBinaryWrite_Click(object sender, EventArgs e)
+        private void btnWriteBinary_Click(object sender, EventArgs e)
         {
             try
             {
@@ -86,10 +85,10 @@ namespace RegistrationForm
                 book.Price = Convert.ToInt32(textBoxPrice.Text);
                 fs = new FileStream(@"D:/TestFolder2/Book", FileMode.Create, FileAccess.Write);
                 BinaryFormatter binary = new BinaryFormatter();
-                binary.Serialize(fs,book);
-               MessageBox.Show("Done");
+                binary.Serialize(fs, book);
+                MessageBox.Show("Done");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -99,7 +98,7 @@ namespace RegistrationForm
             }
         }
 
-        private void btnBinaryRead_Click(object sender, EventArgs e)
+        private void btnReadBinary_Click(object sender, EventArgs e)
         {
             try
             {
@@ -112,7 +111,7 @@ namespace RegistrationForm
                 textBoxAuthor.Text = book.Author;
                 textBoxPrice.Text = book.Price.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -136,7 +135,7 @@ namespace RegistrationForm
                 xml.Serialize(fs, book);
                 MessageBox.Show("Done");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -144,11 +143,7 @@ namespace RegistrationForm
             {
                 fs.Close();
             }
-
-            
-
-       
-    }
+        }
 
         private void btnXmlRead_Click(object sender, EventArgs e)
         {
@@ -187,7 +182,7 @@ namespace RegistrationForm
                 soap.Serialize(fs, book);
                 MessageBox.Show("Done");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -206,12 +201,12 @@ namespace RegistrationForm
                 SoapFormatter soap = new SoapFormatter();
 
                 book = (Book)soap.Deserialize(fs);
-               textBoxId.Text = book.Id.ToString();
+                textBoxId.Text = book.Id.ToString();
                 textBoxBook.Text = book.BookName;
                 textBoxAuthor.Text = book.Author;
                 textBoxPrice.Text = book.Price.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -234,7 +229,7 @@ namespace RegistrationForm
                 JsonSerializer.Serialize(fs, book);
                 MessageBox.Show("Done");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -244,7 +239,7 @@ namespace RegistrationForm
             }
         }
 
-        private void btnJsonRead_Click(object sender, EventArgs e)
+        private void btnJSonRead_Click(object sender, EventArgs e)
         {
             try
             {
@@ -257,7 +252,7 @@ namespace RegistrationForm
                 textBoxPrice.Text = book.Price.ToString();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -265,6 +260,6 @@ namespace RegistrationForm
             {
                 fs.Close();
             }
-         }
+        }
     }
-    }
+}
